@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.12.0
+%define		kdeappsver	24.12.1
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kaddressbook
 Summary:	KAddressbook
 Name:		ka6-%{kaname}
-Version:	24.12.0
+Version:	24.12.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	796fd23862d5902f1af1d522e4f22bb5
+# Source0-md5:	64cdcf1d5bee0a49f537c6d01fa2fd59
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel
