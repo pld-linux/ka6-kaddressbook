@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.12.3
+%define		kdeappsver	25.04.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kaddressbook
 Summary:	KAddressbook
 Name:		ka6-%{kaname}
-Version:	24.12.3
+Version:	25.04.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	093d1eb2344763e65d85601291e6b10e
+# Source0-md5:	9876cffaf2f9b554421c61b6530edac6
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel
@@ -37,6 +37,7 @@ BuildRequires:	kf6-kcrash-devel >= %{kframever}
 BuildRequires:	kf6-kdbusaddons-devel >= %{kframever}
 BuildRequires:	kf6-kdoctools-devel >= %{kframever}
 BuildRequires:	kf6-kiconthemes-devel >= %{kframever}
+BuildRequires:	kf6-kuserfeedback-devel >= %{kframever}
 BuildRequires:	kf6-prison-devel >= %{kframever}
 BuildRequires:	kuserfeedback-devel
 BuildRequires:	ninja
@@ -126,7 +127,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libkaddressbookprivate.so.6
 %attr(755,root,root) %{_libdir}/qt6/plugins/kaddressbookpart.so
 %dir %{_libdir}/qt6/plugins/pim6/kcms/kaddressbook
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/kaddressbook/kaddressbook_config_activities.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/kaddressbook/kaddressbook_config_ldap.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/kaddressbook/kaddressbook_config_plugins.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/kaddressbook/kaddressbook_config_userfeedback.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kontact/kontact_kaddressbookplugin.so
 %{_desktopdir}/kaddressbook-importer.desktop
 %{_desktopdir}/kaddressbook-view.desktop
