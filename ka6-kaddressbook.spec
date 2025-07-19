@@ -22,7 +22,7 @@ BuildRequires:	Qt6Test-devel
 BuildRequires:	Qt6Widgets-devel
 BuildRequires:	cmake >= 3.20
 BuildRequires:	gettext-devel
-BuildRequires:	gpgme-c++-devel >= 1.8.0
+BuildRequires:	gpgmepp-devel >= 1.8.0
 BuildRequires:	ka6-akonadi-devel >= %{kdeappsver}
 BuildRequires:	ka6-akonadi-search-devel >= %{kdeappsver}
 BuildRequires:	ka6-grantleetheme-devel >= %{kdeappsver}
