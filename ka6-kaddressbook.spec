@@ -27,6 +27,7 @@ BuildRequires:	ka6-akonadi-contacts-devel >= %{kdeappsver}
 BuildRequires:	ka6-akonadi-devel >= %{kdeappsver}
 BuildRequires:	ka6-akonadi-search-devel >= %{kdeappsver}
 BuildRequires:	ka6-grantleetheme-devel >= %{kdeappsver}
+BuildRequires:	ka6-kimap-devel >= %{kdeappsver}
 BuildRequires:	ka6-kldap-devel >= %{kdeappsver}
 BuildRequires:	ka6-kontactinterface-devel >= %{kdeappsver}
 BuildRequires:	ka6-kpimtextedit-devel >= %{kdeappsver}
