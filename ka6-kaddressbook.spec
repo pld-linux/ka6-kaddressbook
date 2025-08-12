@@ -8,7 +8,7 @@
 Summary:	KAddressbook
 Name:		ka6-%{kaname}
 Version:	25.04.3
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -26,6 +26,7 @@ BuildRequires:	gpgmepp-devel >= 1.8.0
 BuildRequires:	ka6-akonadi-devel >= %{kdeappsver}
 BuildRequires:	ka6-akonadi-search-devel >= %{kdeappsver}
 BuildRequires:	ka6-grantleetheme-devel >= %{kdeappsver}
+BuildRequires:	ka6-kldap-devel >= %{kdeappsver}
 BuildRequires:	ka6-kontactinterface-devel >= %{kdeappsver}
 BuildRequires:	ka6-kpimtextedit-devel >= %{kdeappsver}
 BuildRequires:	ka6-libkdepim-devel >= %{kdeappsver}
