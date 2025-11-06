@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kaddressbook
 Summary:	KAddressbook
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	440d384e706449cb92a9fe14e6afceba
+# Source0-md5:	33a9892657c9dc9f1a10514f11c4a365
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel
@@ -131,17 +131,17 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kaddressbook
-%attr(755,root,root) %{_libdir}/libKPim6AddressbookImportExport.so.*.*
+%{_libdir}/libKPim6AddressbookImportExport.so.*.*
 %{_libdir}/libKPim6AddressbookImportExport.so.6
-%attr(755,root,root) %{_libdir}/libkaddressbookprivate.so.*.*
+%{_libdir}/libkaddressbookprivate.so.*.*
 %{_libdir}/libkaddressbookprivate.so.6
-%attr(755,root,root) %{_libdir}/qt6/plugins/kaddressbookpart.so
+%{_libdir}/qt6/plugins/kaddressbookpart.so
 %dir %{_libdir}/qt6/plugins/pim6/kcms/kaddressbook
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/kaddressbook/kaddressbook_config_activities.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/kaddressbook/kaddressbook_config_ldap.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/kaddressbook/kaddressbook_config_plugins.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kcms/kaddressbook/kaddressbook_config_userfeedback.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/pim6/kontact/kontact_kaddressbookplugin.so
+%{_libdir}/qt6/plugins/pim6/kcms/kaddressbook/kaddressbook_config_activities.so
+%{_libdir}/qt6/plugins/pim6/kcms/kaddressbook/kaddressbook_config_ldap.so
+%{_libdir}/qt6/plugins/pim6/kcms/kaddressbook/kaddressbook_config_plugins.so
+%{_libdir}/qt6/plugins/pim6/kcms/kaddressbook/kaddressbook_config_userfeedback.so
+%{_libdir}/qt6/plugins/pim6/kontact/kontact_kaddressbookplugin.so
 %{_desktopdir}/kaddressbook-importer.desktop
 %{_desktopdir}/kaddressbook-view.desktop
 %{_desktopdir}/org.kde.kaddressbook.desktop
