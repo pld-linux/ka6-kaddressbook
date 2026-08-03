@@ -8,11 +8,12 @@
 Summary:	KAddressbook
 Name:		ka6-%{kaname}
 Version:	26.04.3
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
 # Source0-md5:	321e31652703a40bbcfd6c6d00434f20
+Patch0:		find_ki18n.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel
@@ -40,9 +41,11 @@ BuildRequires:	kf6-kcrash-devel >= %{kframever}
 BuildRequires:	kf6-kdbusaddons-devel >= %{kframever}
 BuildRequires:	kf6-kdoctools-devel >= %{kframever}
 BuildRequires:	kf6-kiconthemes-devel >= %{kframever}
+BuildRequires:	kf6-kparts-devel >= %{kframever}
 BuildRequires:	kf6-kuserfeedback-devel >= %{kframever}
 BuildRequires:	kf6-kuserfeedback-devel >= %{kframever}
 BuildRequires:	kf6-prison-devel >= %{kframever}
+BuildRequires:	kp6-plasma-activities-devel >= 6.7.3
 BuildRequires:	ninja
 BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
@@ -116,6 +119,7 @@ Pliki nagłówkowe dla programistów używających %{kaname}.
 
 %prep
 %setup -q -n %{kaname}-%{version}
+%patch -P0 -p1
 
 %build
 %cmake \
