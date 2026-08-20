@@ -1,19 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	26.04.3
+%define		kdeappsver	26.08.0
 %define		kframever	6.26.0
 %define		qtver		5.15.2
 %define		kaname		kaddressbook
 Summary:	KAddressbook
 Name:		ka6-%{kaname}
-Version:	26.04.3
-Release:	2
+Version:	26.08.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	321e31652703a40bbcfd6c6d00434f20
-Patch0:		find_ki18n.patch
+# Source0-md5:	29d5335e5d9d01ceb6d07ac26feee37f
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel
@@ -119,7 +118,6 @@ Pliki nagłówkowe dla programistów używających %{kaname}.
 
 %prep
 %setup -q -n %{kaname}-%{version}
-%patch -P0 -p1
 
 %build
 %cmake \
@@ -187,6 +185,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/metainfo/org.kde.kaddressbook.appdata.xml
 %{_datadir}/qlogging-categories6/kaddressbook.categories
 %{_datadir}/qlogging-categories6/kaddressbook.renamecategories
+%{_datadir}/config.kcfg/kaddressbook.kcfg
 
 %files devel
 %defattr(644,root,root,755)
